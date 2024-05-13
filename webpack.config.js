@@ -1,10 +1,11 @@
 const path = require('path')
 
-module.export = {
+module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: './index.js',
   output: {
-    filename: 'bungle.js',
+    filename: '[contenthash].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
 }
