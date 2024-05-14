@@ -2,10 +2,17 @@ import data from './data'
 import './style.css'
 
 const root = document.querySelector('#app')
-
-data.forEach((item) => {
+interface Item {
+  id: number
+  title: string
+}
+function renderItem(item: Item, index: number) {
   const li = document.createElement('li')
   li.textContent = item.title
-  li.className = 'list_item'
+  if (index === 0) {
+    li.style.color = 'blue'
+  }
   root.append(li)
-})
+}
+
+data.forEach(renderItem)
