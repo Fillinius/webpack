@@ -1,4 +1,5 @@
 import data from './data'
+import './style.css'
 
 const root = document.querySelector('#app')
 
